@@ -62,15 +62,34 @@
 # Zobaczmy ćwiczenie, które pomoże lepiej zrozumieć instrukcję pass
 # Umieść instrukcję pass, aby blok if nie zgłaszał błędu
 # In [ ]:
-name = input("Proszę wpisać swoje imię.")
+# name = input("Proszę wpisać swoje imię.")
 # Wpisz swoją odpowiedź tutaj.
-
-if len(name) > 0:
-    print(name)
-else:
-    pass
-
-
-
-
-
+#
+# if len(name) > 0:
+#     print(name)
+# else:
+#     pass
+# x = 0
+# for i in [1, 2, 3, 4]:
+#     x += i
+# print('suma', x)
+#
+# #
+# a = "Python"
+# b = 317
+#
+# print("a: {}, b: {}".format(a, b))
+# b,a = a,b
+#
+# print("a: {}, b: {}".format(a, b))
+x = []
+y = []
+for a in range(1500, 2701):
+    if a % 5 == 0 and a % 7 == 0:
+        x.append(a)
+        y.append(str(a))
+    else:
+        pass
+print(x)
+print(';'.join(y))
+#mozna załadować do excela wykonując:
