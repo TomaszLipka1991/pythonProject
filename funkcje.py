@@ -121,35 +121,59 @@
 #     return p
 # print(sortowanie([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
 
-string = "ABC for the purpose of LetterCounting program"
-print(string)
-words = 1
-letters = 0
-hash_table = {}
-for char in string:
-    char = char.lower()
-    if char == ' ':
-        words += 1
-    else:
-        letters += 1
-        if char in hash_table:
-            hash_table[char] += 1
-        else:
-            hash_table[char] = 1
+# string = "ABC for the purpose of LetterCounting program"
+# print(string)
+# words = 1
+# letters = 0
+# hash_table = {}
+# for char in string:
+#     char = char.lower()
+#     if char == ' ':
+#         words += 1
+#     else:
+#         letters += 1
+#         if char in hash_table:
+#             hash_table[char] += 1
+#         else:
+#             hash_table[char] = 1
+#
+# print("Words:", words, "Letters:", letters, "Freq:", hash_table
 
-print("Words:", words, "Letters:", letters, "Freq:", hash_table)
+# def zlozenie (string):
+#     l=len(string)
+#     if l>=2:
+#         p = string[0:2] + string[l-2:l]
+#     else:
+#         p=''
+#     return p
+# print(zlozenie("P"))
 
+# def fibbonaci_numbers(n):
+#     ''' zwraca liczby Fibonacciego mniejsze od n '''
+#     wynik = []
+#     a, b = 0, 1
+#     while a < n:
+#     # while len(wynik) < n:
+#         wynik.append(a)
+#         a, b = b, a+b
+#     return wynik
+# x = fibbonaci_numbers(10)
+# print(x)
 
+#silnia
 
+# def silnia (n):
+#     if n == 1:
+#         return 1
+#     return silnia(n-1)*n
+# print(silnia(2))
 
+# rekurencyjny ciag fibonacciego
 
-
-
-
-
-
-
-
-
-
+# def fibo2 (n):
+#     if n ==1 or n==0:
+#         return 1
+#     return fibo2(n-2) + fibo2(n-1)
+#for i in range (15)
+    #print(fibo2(n))
 
