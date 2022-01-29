@@ -148,9 +148,145 @@ temperatury = [
 # newvalue – Wymagany; ciąg znaków, który ma zastąpić starą wartość
 # count – Opcjonalny; liczba określająca, ile wystąpień starej wartości chcesz zastąpić;
 # domyślnie są to wszystkie wystąpienia
-tekst = '-a77.8'
-# print(tekst.replace('t','b'))
-y = lambda i: i.replace('.', '', 1).isdigit()
-z = lambda j: y(j[1:]) if j[0] == '-' else y(j)
+# tekst = '-a77.8'
+# # print(tekst.replace('t','b'))
+# y = lambda i: i.replace('.', '', 1).isdigit()
+# z = lambda j: y(j[1:]) if j[0] == '-' else y(j)
+#
+# print(z(tekst))
+#filter, map reduce
+#cw 9
+# wynik = list(filter(lambda x: x>=40.0, temperatury))
+# print(wynik)
 
-print(z(tekst))
+# Napisz program w Pythonie do filtrowania listy liczb parzystych
+# i nieparzystych całkowitych za pomocą lambda i filter
+
+# x = [1, 2, 3, 4, -5, 6, 7, 8, 9, 10]
+# wynik1 = list(filter(lambda i: i % 2 == 0, x))
+# wynik2 = list(filter(lambda i: i % 2 != 0, x))
+# print('liczby parzyste: ', wynik1)
+# print('liczby nieparzyste: ', wynik2)
+
+# cw 10:
+# Napisz program w Pythonie, aby znaleźć przecięcie dwóch podanych list
+# za pomocą lambda i filter
+
+# array_nums1 = [1, 2, 3, 5, 7, 8, 9, 10]
+# array_nums2 = [1, 2, 4, 8, 9]
+#
+# wspolna = list(filter(lambda x: x in array_nums1 ,array_nums2))
+# print(wspolna)
+
+# cw 11
+# Napisz program w Pythonie, aby policzyć parzyste i nieparzyste liczby w danej tablicy
+# liczb całkowitych, używając lambda i filter
+#
+# x = [1, 2, 3, 4, -5, 6, 7, 8, 9, 10, 11]
+# wynik1 = len(list(filter(lambda i: i % 2 == 0, x)))
+# wynik2 = len(list(filter(lambda i: i % 2 != 0, x)))
+# print('ilość liczb parzystych :', wynik1, '\nilość liczb nieparzystych : ', wynik2)
+
+# cw12
+# Napisz program w Pythonie, aby znaleźć wartości o długości sześć na podanej
+# liście za pomocą funkcji lambda i filter
+
+# weekdays = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela']
+# dlugosc6 = list(filter(lambda x: len(x) == 6, weekdays))
+# print(dlugosc6)
+#jezeli nie chcemy listy to mozna zrobic tak:
+# dlugosc6 = filter(lambda x: len(x) == 6, weekdays)
+# for d in dlugosc6:
+#     print(d)
+
+# cw12
+# Napisz program w Pythonie, aby znaleźć liczby podzielne przez dziewiętnaście
+# lub trzynaście z listy liczb za pomocą lambda i filter
+#
+# nums = [19, 65, 57, 39, 152, 639, 121, 44, 90, 190]
+# podzielne = sorted(list(filter(lambda x: x % 13 == 0 or x % 19 == 0, nums)))
+# print(podzielne)
+
+# cw 13:
+# Napisz program w Pythonie, aby znaleźć palindromy na podanej
+# liście ciągów za pomocą lambda i filter
+# Palindrom – wyrażenie brzmiące tak samo czytane od lewej do prawej i od prawej do lewej
+# Przykładem palindromu jest: „kobyła ma mały bok”
+
+# texts = ["php", "w3r", "Python", "abcd", "Java", "aaa"]
+#
+# palindrom = list(filter(lambda x: x == x[::-1], texts))
+# print(palindrom)
+
+# cw 14
+# Napisz program w Pythonie, który zsumuje długość imion z danej
+# listy imion po usunięciu imion zaczynających się od małej litery
+# Użyj funkcji lambda
+#
+# sample_names = ['antoni', 'Jakub', 'zuzanna', 'Julia', 'Jan', 'szymon']
+# duze= list(filter(lambda x: x[0].isupper() and x[1:].islower(), sample_names))
+# print(duze)
+# print('dlugosc zsumowana imion: ', len(''.join(duze)))
+# print(','.join(duze))
+
+# cw 15 map
+# Napisz program w Pythonie podnoszący do kwadratu i sześcianu każdą
+# liczbę z podanej listy liczb całkowitych, używając lambda i map
+# nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# kwadraty = list(map(lambda x: x**2, nums))
+# szesciany = list(map(lambda x: x**3, nums))
+# print(kwadraty)
+# print(szesciany)
+
+# cw16
+# Napisz program w Pythonie, aby dodać dwie podane listy za pomocą map i lambda
+# nums1 = [1, 2, 3, 8]
+# nums2 = [4, 5, 6]
+# suma = list(map(lambda x,y: x+y, nums1, nums2))
+# print(suma)
+# to juz samo po kolei idzie po elelmentach listy tylko ze obie tablice musza yc tyle samo argumentow,
+# jak nie to dziala do tej krotszej tablicy
+
+# cw 17
+# Napisz program w Pythonie, który za pomocą funkcji lambdamnoży każdą liczbę
+# z podanej listy przez określoną liczbę
+# Wydrukuj wynik
+
+# nums = [2, 4, 6, 9, 11]
+# n = 2
+# iloczyn = list(map(lambda x,: x*n, nums))
+# print(iloczyn)
+
+# cw18
+# Napisz program w Pythonie, który usuwa liczby dodatnie z podanej listy liczb
+# Zsumuj liczby ujemne i wydrukuj wartość bezwzględną za pomocą
+# tworzenia listy – ang. list comprehension
+# Wydrukuj wynik
+# nums = [2, 4, -6, -9, 11, -12, 14, -5, 17]
+#
+# print(abs(sum([x for x in nums if x<0])))
+
+
+# cw 19
+# Napisz program w Pythonie, aby zmienić kolejność liczb dodatnich
+# i ujemnych w danej liście (najpierw wszystkie
+# ujemne, potem wszystkie dodatnie) za pomocą tworzenia listy – ang. list comprehension
+# array_nums = [-1, 2, -3, 5, 7, 8, 9, -10]
+# array2 = [x for x in array_nums if x<0]+[x for x in array_nums if x>=0]
+# print(array2)
+
+# cw20
+# Napisz program w Pythonie, aby:
+#     Znaleźć liczby z podanego ciągu
+#     Zapisać je na liście
+#     Wyświetlić liczby w posortowanej formie
+# Użyj funkcji tworzenia listy – ang. list comprehension, aby rozwiązać problem
+
+# str1 = "sdf 23 safs8 5 sdfsd8 sdfs 56 21sfs 20 5"
+# # tablica = str1.split()
+# liczby = sorted([int(x) for x in str1.split() if x.isdigit()])
+# print(liczby)
+
+
+
+
