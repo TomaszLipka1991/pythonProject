@@ -48,12 +48,12 @@ grid.set_z(15)
 grid.set_x(-18.3077/2)
 print(grid.get_tight_bounds())
 
-spot.node().set_shadow_caster(True)
-# spot.node().set_shadow_caster(True, 8192, 8192)
-base.render.set_shader_auto()
+# spot.node().set_shadow_caster(True)
+# # spot.node().set_shadow_caster(True, 8192, 8192)
+# base.render.set_shader_auto()
 
-base.render.set_depth_offset(-5)
-base.set_frame_rate_meter(True)
+# base.render.set_depth_offset(-5)
+# base.set_frame_rate_meter(True)
 
 print(ball.get_hpr())
 
